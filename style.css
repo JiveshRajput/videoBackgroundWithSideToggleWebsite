@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+    transition: all 0.2s ease-in;
+}
+
+.container.active{
+    right: 20%;
+    width: 80%;
+}
+
+header{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 500;
+}
+.toggle{
+    width: 60px;
+    height: 60px;
+    background-size: 40px;
+    background-image: url(btn.PNG);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.toggle.active{
+    width: 60px;
+    height: 60px;
+    background-size: 40px;
+    background-image: url(cross.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+.container video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #03a9f4;
+    mix-blend-mode: overlay;
+}
+
+.text{
+    position: relative;
+    z-index: 5;
+}
+
+
+.text h2{
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 1em;
+    text-shadow: 2px 2px 5px #111;
+
+}
+.text h3{
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+.text p{
+    font-size: 1em;
+    max-width: 800px;
+    margin: 20px 0px 40px 0px;
+}
+
+.text a{
+    background-color: #fff;
+    color: #111;
+    padding: 10px 40px;
+    margin-top: 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in;
+}
+
+.text a:hover{
+    letter-spacing: 6px;
+    color: #03a9f4;
+}
+
+.social{
+    z-index: 7;
+    position: absolute;
+    bottom: 20px;
+}
+
+.social li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.icons{
+    width: 40px;
+    filter: invert(1);
+    transform: scale(0.7);
+    transition: all 0.2s ease-in 0s;
+}
+
+.icons:hover{
+    transform: scale(1) translateY(-15px);
+}
+
+.menu{
+    display: none;
+    transition: all 0.2s ease-in;
+}
+.menu.active{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    min-height: 100vh;
+    background-color: #03a9f4;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    transition: all 0.2s ease-in;
+}
+.menu ul li{
+    list-style: none;
+    padding: 10px 0px;
+    text-align: center;
+}
+.menu ul li a{
+    width: 300px;
+    text-decoration: none;    
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+}
+
+.menu ul li a:hover{
+    color: #03a9f4;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+@media(max-width: 900px){
+    .container, header{
+        padding: 30px;
+    }
+
+    .text h2{
+        font-size: 3rem;
+    }
+    .text h3{
+        font-size: 2rem;
+    }
+}
+
